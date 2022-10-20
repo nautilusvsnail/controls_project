@@ -74,6 +74,74 @@
 			<key>uniqueIdentifier</key>
 			<string>0CE7ABE6-0B8F-4600-9DBF-ED1101A45DBA</string>
 		</dict>
+		<key>145A8BBB-B307-4813-A4D7-90709E4A571F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>145A8BBB-B307-4813-A4D7-90709E4A571F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687985941.54132402</real>
+			<key>timeStoppedRecording</key>
+			<real>687986433.93431902</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>145A8BBB-B307-4813-A4D7-90709E4A571F</string>
+		</dict>
+		<key>1CDC7578-BDE9-4230-A8C8-3C78129E36C6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1CDC7578-BDE9-4230-A8C8-3C78129E36C6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687984941.74843001</real>
+			<key>timeStoppedRecording</key>
+			<real>687984986.44545805</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>1CDC7578-BDE9-4230-A8C8-3C78129E36C6</string>
+		</dict>
 		<key>22FC4EB2-1C2F-49A2-9259-7AE52308B981</key>
 		<dict>
 			<key>className</key>
@@ -107,6 +175,40 @@
 			<string>Run FCND-CPPSim</string>
 			<key>uniqueIdentifier</key>
 			<string>22FC4EB2-1C2F-49A2-9259-7AE52308B981</string>
+		</dict>
+		<key>266237DA-0A4A-4D33-A9D8-BDB6B04D49C5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>266237DA-0A4A-4D33-A9D8-BDB6B04D49C5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687988011.44707501</real>
+			<key>timeStoppedRecording</key>
+			<real>687988030.12499797</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>266237DA-0A4A-4D33-A9D8-BDB6B04D49C5</string>
 		</dict>
 		<key>3789980B-C39A-4478-B2AE-B9B62BAAD6DD</key>
 		<dict>
@@ -210,6 +312,40 @@
 			<key>uniqueIdentifier</key>
 			<string>3F893C5C-3093-4A90-B612-B9A51FE59525</string>
 		</dict>
+		<key>419C1C1E-A227-4434-9E1E-2C80B98657B5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>419C1C1E-A227-4434-9E1E-2C80B98657B5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687982618.07309997</real>
+			<key>timeStoppedRecording</key>
+			<real>687982676.35350704</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>419C1C1E-A227-4434-9E1E-2C80B98657B5</string>
+		</dict>
 		<key>44617AB2-55AC-486C-A9C2-7F7D1E3E6CFA</key>
 		<dict>
 			<key>className</key>
@@ -311,6 +447,74 @@
 			<string>Run FCND-CPPSim</string>
 			<key>uniqueIdentifier</key>
 			<string>479F2987-47AD-43CD-A149-E4B8E34D482B</string>
+		</dict>
+		<key>53325A10-FADF-47D7-BCAD-68CA6CAFE522</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>53325A10-FADF-47D7-BCAD-68CA6CAFE522.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687984491.70749402</real>
+			<key>timeStoppedRecording</key>
+			<real>687984766.54332697</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>53325A10-FADF-47D7-BCAD-68CA6CAFE522</string>
+		</dict>
+		<key>59C3F242-CBD4-43D7-9FB8-60DFA7863E4E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>59C3F242-CBD4-43D7-9FB8-60DFA7863E4E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687988797.25067902</real>
+			<key>timeStoppedRecording</key>
+			<real>687988813.23679602</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>59C3F242-CBD4-43D7-9FB8-60DFA7863E4E</string>
 		</dict>
 		<key>5A4CCCB3-A092-4D4B-90DB-E03F71183745</key>
 		<dict>
@@ -414,6 +618,40 @@
 			<key>uniqueIdentifier</key>
 			<string>61EF6A8D-07A7-4A9C-B0EF-333CC7426075</string>
 		</dict>
+		<key>69B01DD9-668B-45C8-BF63-840433972C18</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>69B01DD9-668B-45C8-BF63-840433972C18.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687978396.81057799</real>
+			<key>timeStoppedRecording</key>
+			<real>687978580.02057898</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>69B01DD9-668B-45C8-BF63-840433972C18</string>
+		</dict>
 		<key>770B71DC-0C02-4EFE-B77F-D7AAD28C1AB6</key>
 		<dict>
 			<key>className</key>
@@ -481,6 +719,40 @@
 			<string>Run FCND-CPPSim</string>
 			<key>uniqueIdentifier</key>
 			<string>7727331C-B855-4987-B0CB-612D08E64E6D</string>
+		</dict>
+		<key>82689F1B-806C-4BE4-A46E-F6FBE4E78A68</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>82689F1B-806C-4BE4-A46E-F6FBE4E78A68.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687987612.89184403</real>
+			<key>timeStoppedRecording</key>
+			<real>687987619.02331698</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>82689F1B-806C-4BE4-A46E-F6FBE4E78A68</string>
 		</dict>
 		<key>8360C76D-449E-4005-A4B2-8BDD411189A9</key>
 		<dict>
@@ -584,6 +856,40 @@
 			<key>uniqueIdentifier</key>
 			<string>8D11D44C-8899-46B0-8964-29A285CF6E5C</string>
 		</dict>
+		<key>8D339BD8-BC47-4D8C-A7DC-43C8C64839E8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>8D339BD8-BC47-4D8C-A7DC-43C8C64839E8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687978642.84523797</real>
+			<key>timeStoppedRecording</key>
+			<real>687978772.67898595</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>8D339BD8-BC47-4D8C-A7DC-43C8C64839E8</string>
+		</dict>
 		<key>976687D2-7178-4B60-8C77-E4D64320BDFE</key>
 		<dict>
 			<key>className</key>
@@ -686,6 +992,108 @@
 			<key>uniqueIdentifier</key>
 			<string>9C014730-A9FB-4436-B6C3-4447DEF52661</string>
 		</dict>
+		<key>9E8D0F9A-403D-4ECF-8A75-71ACCB2BB0EA</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9E8D0F9A-403D-4ECF-8A75-71ACCB2BB0EA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687984988.04589903</real>
+			<key>timeStoppedRecording</key>
+			<real>687985499.44819796</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>9E8D0F9A-403D-4ECF-8A75-71ACCB2BB0EA</string>
+		</dict>
+		<key>A30975D3-DD5C-4B03-890E-26D0F4F6E59D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A30975D3-DD5C-4B03-890E-26D0F4F6E59D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687986831.50712597</real>
+			<key>timeStoppedRecording</key>
+			<real>687986862.57032001</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>A30975D3-DD5C-4B03-890E-26D0F4F6E59D</string>
+		</dict>
+		<key>A600408D-CC72-486D-A1E6-3C17A8054680</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A600408D-CC72-486D-A1E6-3C17A8054680.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687984351.82496905</real>
+			<key>timeStoppedRecording</key>
+			<real>687984477.04507101</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>A600408D-CC72-486D-A1E6-3C17A8054680</string>
+		</dict>
 		<key>AB9B6618-CC5A-4F9B-9660-ED6517D94D4F</key>
 		<dict>
 			<key>className</key>
@@ -719,6 +1127,176 @@
 			<string>Run FCND-CPPSim</string>
 			<key>uniqueIdentifier</key>
 			<string>AB9B6618-CC5A-4F9B-9660-ED6517D94D4F</string>
+		</dict>
+		<key>AE7BB665-A326-40E2-9836-A9EF081B2470</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>AE7BB665-A326-40E2-9836-A9EF081B2470.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687987559.03780699</real>
+			<key>timeStoppedRecording</key>
+			<real>687987580.88667905</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>AE7BB665-A326-40E2-9836-A9EF081B2470</string>
+		</dict>
+		<key>B0BA4AEB-B6BC-42F6-A3E3-B97BABB1AD4A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B0BA4AEB-B6BC-42F6-A3E3-B97BABB1AD4A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687978581.37606096</real>
+			<key>timeStoppedRecording</key>
+			<real>687978639.603899</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>B0BA4AEB-B6BC-42F6-A3E3-B97BABB1AD4A</string>
+		</dict>
+		<key>C70C76AB-4147-4AF7-BADE-8D0708FACA5B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C70C76AB-4147-4AF7-BADE-8D0708FACA5B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687987933.07451999</real>
+			<key>timeStoppedRecording</key>
+			<real>687988001.443802</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>C70C76AB-4147-4AF7-BADE-8D0708FACA5B</string>
+		</dict>
+		<key>CA166357-3737-4FA6-B399-9D7C9D35246F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>CA166357-3737-4FA6-B399-9D7C9D35246F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687978778.44093895</real>
+			<key>timeStoppedRecording</key>
+			<real>687978790.87664998</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>CA166357-3737-4FA6-B399-9D7C9D35246F</string>
+		</dict>
+		<key>D50E5EE3-EC5C-4786-B3AC-5DFB7110AEE4</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D50E5EE3-EC5C-4786-B3AC-5DFB7110AEE4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687988361.02083504</real>
+			<key>timeStoppedRecording</key>
+			<real>687988752.71500695</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>D50E5EE3-EC5C-4786-B3AC-5DFB7110AEE4</string>
 		</dict>
 		<key>E7EF1EF9-58CE-4E92-9B86-DF759F5B9C84</key>
 		<dict>
@@ -754,6 +1332,40 @@
 			<key>uniqueIdentifier</key>
 			<string>E7EF1EF9-58CE-4E92-9B86-DF759F5B9C84</string>
 		</dict>
+		<key>EC435BA6-0BB6-45B4-8467-FD8CA10A1CED</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EC435BA6-0BB6-45B4-8467-FD8CA10A1CED.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687982698.84794903</real>
+			<key>timeStoppedRecording</key>
+			<real>687982738.19719803</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>EC435BA6-0BB6-45B4-8467-FD8CA10A1CED</string>
+		</dict>
 		<key>EF6FA8CF-87C3-40A1-80C4-E7805218A26C</key>
 		<dict>
 			<key>className</key>
@@ -788,6 +1400,40 @@
 			<key>uniqueIdentifier</key>
 			<string>EF6FA8CF-87C3-40A1-80C4-E7805218A26C</string>
 		</dict>
+		<key>F82C2ED9-804E-4DFB-BEBA-0ABF3F338175</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F82C2ED9-804E-4DFB-BEBA-0ABF3F338175.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687984768.58050597</real>
+			<key>timeStoppedRecording</key>
+			<real>687984875.25829101</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>F82C2ED9-804E-4DFB-BEBA-0ABF3F338175</string>
+		</dict>
 		<key>FA17F146-3847-4CDC-8CA0-F39C0BBABDBC</key>
 		<dict>
 			<key>className</key>
@@ -821,6 +1467,40 @@
 			<string>Run FCND-CPPSim</string>
 			<key>uniqueIdentifier</key>
 			<string>FA17F146-3847-4CDC-8CA0-F39C0BBABDBC</string>
+		</dict>
+		<key>FEFB8AFE-3830-4586-8D74-079A4397278F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>FEFB8AFE-3830-4586-8D74-079A4397278F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FCND-CPPSim project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FCND-CPPSim</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FCND-CPPSim</string>
+			<key>timeStartedRecording</key>
+			<real>687986756.34552705</real>
+			<key>timeStoppedRecording</key>
+			<real>687986815.26239002</real>
+			<key>title</key>
+			<string>Run FCND-CPPSim</string>
+			<key>uniqueIdentifier</key>
+			<string>FEFB8AFE-3830-4586-8D74-079A4397278F</string>
 		</dict>
 	</dict>
 </dict>

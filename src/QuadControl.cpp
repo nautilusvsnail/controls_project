@@ -48,6 +48,7 @@ void QuadControl::Init()
   
   kappa = config->Get(_config + ".kappa", 0.01f);
   L = config->Get(_config + ".L", 0.01f); // dist from center to thrust
+  orth_l = L * sin(to_rad(45.f));
   
   // Moments of inertia
   Ixx = config->Get(_config + ".Ixx", 0.001f);
@@ -59,6 +60,19 @@ void QuadControl::Init()
   param_get(param_find("MC_PITCH_P"), &Kp_bank);
   param_get(param_find("MC_YAW_P"), &Kp_yaw);
 #endif
+}
+
+float QuadControl::to_rad(float deg)
+{
+  // convert an angle defined in degrees to radians
+  // INPUT:
+  //  deg: angle in degrees
+  // OUTPUT:
+  //  rad: angle in radians
+  
+  float rad;
+  rad = 2.f * F_PI * (deg / 360.f);
+  return rad;
 }
 
 VehicleCommand QuadControl::GenerateMotorCommands(float collThrustCmd, V3F momentCmd)
@@ -78,18 +92,36 @@ VehicleCommand QuadControl::GenerateMotorCommands(float collThrustCmd, V3F momen
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
   
-  float f_c = -collThrustCmd;
-  float f_p = momentCmd.x / L;
-  float f_q = momentCmd.y / L;
+//  collThrustCmd = mass * CONST_GRAVITY;
+  float f_c = collThrustCmd;
+  float f_p = momentCmd.x / orth_l;
+  float f_q = momentCmd.y / orth_l;
   float f_r = momentCmd.z / kappa;
   
   // where does it tell you motor spin direction???? it's opposite the drone in the exercises
   // (used first - incorrect - solve)
   
-  cmd.desiredThrustsN[0] = (f_c + f_p + f_q + f_r) / 4.f;
-  cmd.desiredThrustsN[1] = (f_c + -f_p + f_q + -f_r) / 4.f;
-  cmd.desiredThrustsN[2] = (f_c + f_p + -f_q + -f_r) / 4.f;
-  cmd.desiredThrustsN[3] = (f_c + -f_p + f_q + -f_r) / 4.f;
+  cmd.desiredThrustsN[0] = (f_c + f_p + f_q + -f_r) / 4.f; // forward port
+  cmd.desiredThrustsN[1] = (f_c + -f_p + f_q + f_r) / 4.f; // forward starboard
+  cmd.desiredThrustsN[2] = (f_c + f_p + -f_q + f_r) / 4.f; // aft port
+  cmd.desiredThrustsN[3] = (f_c + -f_p + -f_q + -f_r) / 4.f; // aft starboard
+  
+  // alert if controller is commanding thrusts outside of range
+  for (int i=0; i<4; i++)
+  {
+    float con_val = CONSTRAIN(cmd.desiredThrustsN[i],minMotorThrust,maxMotorThrust);
+    if (con_val != cmd.desiredThrustsN[i])
+    {
+      printf("MOTOR %d THRUST CMD EXCEEDS THRESHOLD\n", i);
+    }
+  }
+  
+  // keep commands below threshold values
+//  cmd.desiredThrustsN[0] = CONSTRAIN(cmd.desiredThrustsN[0],minMotorThrust,maxMotorThrust);
+//  cmd.desiredThrustsN[1] = CONSTRAIN(cmd.desiredThrustsN[1],minMotorThrust,maxMotorThrust);
+//  cmd.desiredThrustsN[2] = CONSTRAIN(cmd.desiredThrustsN[2],minMotorThrust,maxMotorThrust);
+//  cmd.desiredThrustsN[3] = CONSTRAIN(cmd.desiredThrustsN[3],minMotorThrust,maxMotorThrust);
+  
   
 //  cmd.desiredThrustsN[0] = mass * 9.81f / 4.f; // front left
 //  cmd.desiredThrustsN[1] = mass * 9.81f / 4.f; // front right
@@ -118,11 +150,11 @@ V3F QuadControl::BodyRateControl(V3F pqrCmd, V3F pqr)
   V3F momentCmd;
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
+  
   V3F pqrError = pqrCmd - pqr;
-  V3F Ixyz(Ixx, Iyy, Izz);
-  momentCmd.x = Ixyz.x * kpPQR.x * pqrError.x;
-  momentCmd.y = Ixyz.y * kpPQR.y * pqrError.y;
-  momentCmd.z = Ixyz.z * kpPQR.z * pqrError.z;
+  momentCmd.x = Ixx * kpPQR.x * pqrError.x;
+  momentCmd.y = Iyy * kpPQR.y * pqrError.y;
+  momentCmd.z = Izz * kpPQR.z * pqrError.z;
 
   /////////////////////////////// END STUDENT CODE ////////////////////////////
 
