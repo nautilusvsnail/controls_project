@@ -104,8 +104,8 @@ void GraphManager::Paint()
   {
     glutSetWindow(_glutWindowNum);
 
-    int width = glutGet(GLUT_WINDOW_WIDTH);
-    int height = glutGet(GLUT_WINDOW_HEIGHT);
+    int width = 2*glutGet(GLUT_WINDOW_WIDTH);
+    int height = 2*glutGet(GLUT_WINDOW_HEIGHT);
 
     glViewport(0, 0, width, height);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);  //Clear the screen

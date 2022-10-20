@@ -45,6 +45,14 @@ void QuadControl::Init()
 
   minMotorThrust = config->Get(_config + ".minMotorThrust", 0);
   maxMotorThrust = config->Get(_config + ".maxMotorThrust", 100);
+  
+  kappa = config->Get(_config + ".kappa", 0.01f);
+  L = config->Get(_config + ".L", 0.01f); // dist from center to thrust
+  
+  // Moments of inertia
+  Ixx = config->Get(_config + ".Ixx", 0.001f);
+  Iyy = config->Get(_config + ".Iyy", 0.001f);
+  Izz = config->Get(_config + ".Izz", 0.002f);
 #else
   // load params from PX4 parameter system
   //TODO
@@ -69,11 +77,24 @@ VehicleCommand QuadControl::GenerateMotorCommands(float collThrustCmd, V3F momen
   // You'll need the arm length parameter L, and the drag/thrust ratio kappa
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
-
-  cmd.desiredThrustsN[0] = mass * 9.81f / 4.f; // front left
-  cmd.desiredThrustsN[1] = mass * 9.81f / 4.f; // front right
-  cmd.desiredThrustsN[2] = mass * 9.81f / 4.f; // rear left
-  cmd.desiredThrustsN[3] = mass * 9.81f / 4.f; // rear right
+  
+  float f_c = -collThrustCmd;
+  float f_p = momentCmd.x / L;
+  float f_q = momentCmd.y / L;
+  float f_r = momentCmd.z / kappa;
+  
+  // where does it tell you motor spin direction???? it's opposite the drone in the exercises
+  // (used first - incorrect - solve)
+  
+  cmd.desiredThrustsN[0] = (f_c + f_p + f_q + f_r) / 4.f;
+  cmd.desiredThrustsN[1] = (f_c + -f_p + f_q + -f_r) / 4.f;
+  cmd.desiredThrustsN[2] = (f_c + f_p + -f_q + -f_r) / 4.f;
+  cmd.desiredThrustsN[3] = (f_c + -f_p + f_q + -f_r) / 4.f;
+  
+//  cmd.desiredThrustsN[0] = mass * 9.81f / 4.f; // front left
+//  cmd.desiredThrustsN[1] = mass * 9.81f / 4.f; // front right
+//  cmd.desiredThrustsN[2] = mass * 9.81f / 4.f; // rear left
+//  cmd.desiredThrustsN[3] = mass * 9.81f / 4.f; // rear right
 
   /////////////////////////////// END STUDENT CODE ////////////////////////////
 
@@ -97,8 +118,11 @@ V3F QuadControl::BodyRateControl(V3F pqrCmd, V3F pqr)
   V3F momentCmd;
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
-
-  
+  V3F pqrError = pqrCmd - pqr;
+  V3F Ixyz(Ixx, Iyy, Izz);
+  momentCmd.x = Ixyz.x * kpPQR.x * pqrError.x;
+  momentCmd.y = Ixyz.y * kpPQR.y * pqrError.y;
+  momentCmd.z = Ixyz.z * kpPQR.z * pqrError.z;
 
   /////////////////////////////// END STUDENT CODE ////////////////////////////
 
@@ -124,7 +148,7 @@ V3F QuadControl::RollPitchControl(V3F accelCmd, Quaternion<float> attitude, floa
   //  - you'll need the roll/pitch gain kpBank
   //  - collThrustCmd is a force in Newtons! You'll likely want to convert it to acceleration first
 
-  V3F pqrCmd;
+  V3F pqrCmd(0,0,0);
   Mat3x3F R = attitude.RotationMatrix_IwrtB();
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
