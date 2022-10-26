@@ -106,27 +106,7 @@ VehicleCommand QuadControl::GenerateMotorCommands(float collThrustCmd, V3F momen
   cmd.desiredThrustsN[2] = (f_c + f_p + -f_q + f_r) / 4.f; // aft port
   cmd.desiredThrustsN[3] = (f_c + -f_p + -f_q + -f_r) / 4.f; // aft starboard
   
-  // alert if controller is commanding thrusts outside of range
-  for (int i=0; i<4; i++)
-  {
-    float con_val = CONSTRAIN(cmd.desiredThrustsN[i],minMotorThrust,maxMotorThrust);
-    if (con_val != cmd.desiredThrustsN[i])
-    {
-      printf("MOTOR %d THRUST CMD EXCEEDS THRESHOLD\n", i);
-    }
-  }
-  
-  // keep commands below threshold values
-//  cmd.desiredThrustsN[0] = CONSTRAIN(cmd.desiredThrustsN[0],minMotorThrust,maxMotorThrust);
-//  cmd.desiredThrustsN[1] = CONSTRAIN(cmd.desiredThrustsN[1],minMotorThrust,maxMotorThrust);
-//  cmd.desiredThrustsN[2] = CONSTRAIN(cmd.desiredThrustsN[2],minMotorThrust,maxMotorThrust);
-//  cmd.desiredThrustsN[3] = CONSTRAIN(cmd.desiredThrustsN[3],minMotorThrust,maxMotorThrust);
-  
-  
-//  cmd.desiredThrustsN[0] = mass * 9.81f / 4.f; // front left
-//  cmd.desiredThrustsN[1] = mass * 9.81f / 4.f; // front right
-//  cmd.desiredThrustsN[2] = mass * 9.81f / 4.f; // rear left
-//  cmd.desiredThrustsN[3] = mass * 9.81f / 4.f; // rear right
+  // desired thrust commands are constrained in quaddynamics
 
   /////////////////////////////// END STUDENT CODE ////////////////////////////
 
@@ -182,11 +162,30 @@ V3F QuadControl::RollPitchControl(V3F accelCmd, Quaternion<float> attitude, floa
 
   V3F pqrCmd(0,0,0);
   Mat3x3F R = attitude.RotationMatrix_IwrtB();
+  V3D rpy = attitude.ToEulerRPY();
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
 
-
-
+  float c_acc = -collThrustCmd / mass; // collective acceleration due to thrust
+  
+  float max_tilt_cos = cos(maxTiltAngle);
+  
+  float bx_c = accelCmd.x / c_acc;
+  float by_c = accelCmd.y / c_acc;
+  
+  bx_c = CONSTRAIN(bx_c, -max_tilt_cos, max_tilt_cos); // commanded x-tilt [transformation element]
+  by_c = CONSTRAIN(by_c, -max_tilt_cos, max_tilt_cos); // commanded y-tilt [transformation element]
+  
+  // set commanded bank rates
+  float bdot_xc = kpBank * (bx_c - R(0,2));
+  float bdot_yc = kpBank * (by_c - R(1,2));
+  
+  // convert to p and q in body frame
+  pqrCmd.x = (1 / R(2,2)) * ((R(1,0) * bdot_xc) - (R(0,0) * bdot_yc));
+  pqrCmd.y = (1 / R(2,2)) * ((R(1,1) * bdot_xc) - (R(0,1) * bdot_yc));
+//  pqrCmd.x = (1 / R(2,2)) * ((R(0,0) * bdot_yc) - (R(1,0) * bdot_xc));
+//  pqrCmd.y = (1 / R(2,2)) * ((R(0,1) * bdot_yc) - (R(1,1) * bdot_xc));
+  
   /////////////////////////////// END STUDENT CODE ////////////////////////////
 
   return pqrCmd;
@@ -217,8 +216,15 @@ float QuadControl::AltitudeControl(float posZCmd, float velZCmd, float posZ, flo
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
 
-
-
+  velZCmd = CONSTRAIN(velZCmd, -maxAscentRate, maxDescentRate);
+  float z_err = (posZCmd - posZ);
+  float p_term = kpPosZ * z_err;
+  integratedAltitudeError += z_err * dt;
+  float i_term = KiPosZ * integratedAltitudeError;
+  float d_term = kpVelZ * (velZCmd - velZ);
+  float zdd_targ = p_term + i_term + d_term + accelZCmd;
+  thrust = ((CONST_GRAVITY - zdd_targ) * mass) / R(2,2);
+  
   /////////////////////////////// END STUDENT CODE ////////////////////////////
   
   return thrust;
@@ -254,8 +260,14 @@ V3F QuadControl::LateralPositionControl(V3F posCmd, V3F velCmd, V3F pos, V3F vel
   V3F accelCmd = accelCmdFF;
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
-
   
+  velCmd += kpPosXY * (posCmd - pos);
+  velCmd.x = CONSTRAIN(velCmd.x, -maxSpeedXY, maxSpeedXY);
+  velCmd.y = CONSTRAIN(velCmd.y, -maxSpeedXY, maxSpeedXY);
+  
+  accelCmd += kpVelXY * (velCmd - vel);
+  accelCmd.x = CONSTRAIN(accelCmd.x, -maxAccelXY, maxAccelXY);
+  accelCmd.y = CONSTRAIN(accelCmd.y, -maxAccelXY, maxAccelXY);
 
   /////////////////////////////// END STUDENT CODE ////////////////////////////
 
