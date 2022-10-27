@@ -288,10 +288,34 @@ float QuadControl::YawControl(float yawCmd, float yaw)
   //  - use the yaw control gain parameter kpYaw
 
   float yawRateCmd=0;
+  float yawCmd_2pi = 0;
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
+  
+  // correct for yaw cmd outside -2pi:2pi
+  if (yawCmd > 0)
+  {
+    yawCmd_2pi = fmodf(yawCmd, 2 * F_PI);
+  }
+  else
+  {
+    yawCmd_2pi = -fmodf(-yawCmd, 2 * F_PI);
+  }
 
-  yawRateCmd = kpYaw * (yawCmd - yaw);
-  // yawRateCmd = CONSTRAIN(yawRateCmd, -maxYawRate, maxYawRate);
+  // error
+  float err = yawCmd_2pi - yaw;
+
+  // correct for error value outside -2pi:2pi
+  if (err > F_PI)
+  {
+    err -= 2 * F_PI;
+  }
+  if (err < -F_PI)
+  {
+    err += 2 * F_PI;
+  }
+
+  // calculate rate command
+  yawRateCmd = kpYaw * err;
 
   /////////////////////////////// END STUDENT CODE ////////////////////////////
 
