@@ -9,7 +9,7 @@
 UseIdealEstimator=1
 
 # Physical properties
-Mass = 0.5
+Mass = 0.4
 L = 0.17
 Ixx = 0.0023
 Iyy = 0.0023
@@ -19,25 +19,24 @@ minMotorThrust = .1
 maxMotorThrust = 4.5
 
 # Position control gains
-kpPosXY = 3 				# orig: 1
-kpPosZ = 10 				# orig: 1			
-KiPosZ = 70 				# orig: 20
+kpPosXY = 3  		# orig:1
+kpPosZ = 4  		# orig:1
+KiPosZ = 60  		# orig:20
 
 # Velocity control gains
-kpVelXY = 12 				# orig: 4
-kpVelZ = 24 				# orig: 4
+kpVelXY = 16  		# orig:4
+kpVelZ = 16			# orig:4
 
 # Angle control gains
-kpBank = 12 				# orig: 5
-kpYaw = 2 					# orig: 1
+kpBank = 12  		# orig:5
+kpYaw = 2  			# orig:1
 
 # Angle rate gains
-kpPQR = 69, 69, 5 			# orig: 23, 23, 5
+kpPQR = 53, 53, 15	# orig:23, 23, 5
 
 # limits
 maxAscentRate = 5
 maxDescentRate = 2
 maxSpeedXY = 5
 maxHorizAccel = 12
-maxTiltAngle = .7
-integratorConstraint = .3
+maxTiltAngle = .7 # radians?

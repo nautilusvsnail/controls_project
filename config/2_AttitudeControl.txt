@@ -23,14 +23,10 @@ Quad.InitialOmega=30,0,0
 # graphing commands
 Commands.1=AddGraph1.Quad.Roll
 Commands.2=AddGraph1.AbsThreshold(Quad.Roll,0.03,0.1)
-Commands.3=AddGraph1.Quad.Pitch
-Commands.4=AddGraph1.AbsThreshold(Quad.Pitch,0.03,0.1)
-Commands.5=AddGraph2.Quad.Omega.X
-Commands.6=AddGraph2.AbsThreshold(Quad.Omega.X,3,0.1)
-Commands.7=AddGraph2.Quad.Omega.Y
-Commands.8=AddGraph2.AbsThreshold(Quad.Omega.Y,3,0.1)
-Commands.9=AddGraph1.WindowThreshold(Quad.Roll,0.025,0.75)
-Commands.10=AddGraph2.WindowThreshold(Quad.Omega.X,2.5,0.75)
+Commands.3=AddGraph2.Quad.Omega.X
+Commands.4=AddGraph2.AbsThreshold(Quad.Omega.X,3,0.1)
+Commands.5=AddGraph1.WindowThreshold(Quad.Roll,0.025,0.75)
+Commands.6=AddGraph2.WindowThreshold(Quad.Omega.X,2.5,0.75)
 
 INCLUDE QuadControlParams.txt
 INCLUDE Simulation.txt
@@ -41,3 +37,4 @@ kpPosXY = 0
 kpPosZ = 0
 kpVelXY = 0
 kpVelZ = 0
+#kpBank = 0

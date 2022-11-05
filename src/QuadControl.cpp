@@ -49,6 +49,7 @@ void QuadControl::Init()
   kappa = config->Get(_config + ".kappa", 0.01f);
   L = config->Get(_config + ".L", 0.01f); // dist from center to thrust
   orth_l = L * sin(to_rad(45.f));
+  integratorConstraint = config->Get(_config + ".integratorConstraint", 100);
   
   // Moments of inertia
   Ixx = config->Get(_config + ".Ixx", 0.001f);
@@ -162,7 +163,6 @@ V3F QuadControl::RollPitchControl(V3F accelCmd, Quaternion<float> attitude, floa
 
   V3F pqrCmd(0,0,0);
   Mat3x3F R = attitude.RotationMatrix_IwrtB();
-  V3D rpy = attitude.ToEulerRPY();
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
 
@@ -220,6 +220,7 @@ float QuadControl::AltitudeControl(float posZCmd, float velZCmd, float posZ, flo
   float z_err = (posZCmd - posZ);
   float p_term = kpPosZ * z_err;
   integratedAltitudeError += z_err * dt;
+  integratedAltitudeError = CONSTRAIN(integratedAltitudeError,-integratorConstraint, integratorConstraint);
   float i_term = KiPosZ * integratedAltitudeError;
   float d_term = kpVelZ * (velZCmd - velZ);
   float zdd_targ = p_term + i_term + d_term + accelZCmd;

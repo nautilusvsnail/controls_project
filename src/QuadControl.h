@@ -54,4 +54,5 @@ public:
   
   // additional parameters
   float orth_l; // orthogonal distance from axes to rotors
+  float integratorConstraint; // constrain i term to counter windup
 };
