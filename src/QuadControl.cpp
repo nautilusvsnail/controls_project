@@ -183,8 +183,6 @@ V3F QuadControl::RollPitchControl(V3F accelCmd, Quaternion<float> attitude, floa
   // convert to p and q in body frame
   pqrCmd.x = (1 / R(2,2)) * ((R(1,0) * bdot_xc) - (R(0,0) * bdot_yc));
   pqrCmd.y = (1 / R(2,2)) * ((R(1,1) * bdot_xc) - (R(0,1) * bdot_yc));
-//  pqrCmd.x = (1 / R(2,2)) * ((R(0,0) * bdot_yc) - (R(1,0) * bdot_xc));
-//  pqrCmd.y = (1 / R(2,2)) * ((R(0,1) * bdot_yc) - (R(1,1) * bdot_xc));
   
   /////////////////////////////// END STUDENT CODE ////////////////////////////
 
@@ -321,7 +319,6 @@ float QuadControl::YawControl(float yawCmd, float yaw)
   /////////////////////////////// END STUDENT CODE ////////////////////////////
 
   return yawRateCmd;
-
 }
 
 VehicleCommand QuadControl::RunControl(float dt, float simTime)
