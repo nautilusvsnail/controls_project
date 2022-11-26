@@ -37,3 +37,4 @@ kpPosXY = 0
 kpPosZ = 0
 kpVelXY = 0
 kpVelZ = 0
+#kpBank = 0
