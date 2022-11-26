@@ -8,7 +8,7 @@
 
 
 ## Statement
-Implement the following formula for proportional control of body roll rates in each of three (body frame) axes, using `V3F` type to store moment commands and roll errors in each axis.
+- Implement the following formula for proportional control of body roll rates in each of three (body frame) axes, using `V3F` type to store moment commands and roll errors in each axis.
 $$M_c = K_p * I * e(t)$$
 
 
@@ -35,13 +35,13 @@ V3F QuadControl::BodyRateControl(V3F pqrCmd, V3F pqr)
 
 
 ## Statement
-Obtain commanded acceleration in NED frame by dividing thrust command by -mass.
-Obtain the transformation element of the tilt constraint by taking its cosine
-Obtain the transformation elements for commanded tilt in the x- and y-directions (equivalent to the cosine of the tilt angles) by dividing commanded acceleration in the x and y by net acceleration.
-Constrain the commanded x- and y-tilt elements by the maximum tilt cosine
-Calculate a commanded rate of change of each rotational element using a proportional controller:
+- Obtain commanded acceleration in NED frame by dividing thrust command by -mass.
+- Obtain the transformation element of the tilt constraint by taking its cosine
+- Obtain the transformation elements for commanded tilt in the x- and y-directions (equivalent to the cosine of the tilt angles) by dividing commanded acceleration in the x and y by net acceleration.
+- Constrain the commanded x- and y-tilt elements by the maximum tilt cosine
+- Calculate a commanded rate of change of each rotational element using a proportional controller:
 $$\dot b_c = K_p * (b_c - b_a)$$
-Map the commanded rotational elements to rotational body velocities using the estimated attitude matrix R:
+- Map the commanded rotational elements to rotational body velocities using the estimated attitude matrix R:
 $$\begin{bmatrix} p_c \\ q_c \end{bmatrix}=\frac{1}{R_{33}}\begin{bmatrix}R_{21}&-R_{11}\\R_{22}&-R_{12}\end{bmatrix}\begin{bmatrix}\dot b^x_c\\\dot b^y_c\end{bmatrix}$$
 
 
@@ -84,11 +84,11 @@ V3F QuadControl::RollPitchControl(V3F accelCmd, Quaternion<float> attitude, floa
 
 
 ## Statement
-Constrain z velocity command by max ascent and descent rates
-Generate a commanded vertical acceleration using a PID controller with feedforward:
+- Constrain z velocity command by max ascent and descent rates
+- Generate a commanded vertical acceleration using a PID controller with feedforward:
 $$\bar u(t)=K_pe(t)+K_i\int_0^te(\tau)d\tau+K_d\dot e(t)+\ddot z_{targ}(t)$$
-Constrain integral term to a preset value to limit integral windup
-Use the vehicle's estimated attitude and mass to convert desired vertical acceleration to a thrust target:
+- Constrain integral term to a preset value to limit integral windup
+- Use the vehicle's estimated attitude and mass to convert desired vertical acceleration to a thrust target:
 $$t_c=\frac{(G-\ddot z_{targ})*m}{R_{22}}$$
 
 
@@ -121,9 +121,9 @@ float QuadControl::AltitudeControl(float posZCmd, float velZCmd, float posZ, flo
 
 
 ## Statement
-Use a cascaded p-controller (instead of a PD controller) to command lateral acceleration:
+- Use a cascaded p-controller (instead of a PD controller) to command lateral acceleration:
 $$\ddot u=K_v(K_p(u_c-u_a)-\dot u_a)+\ddot u_{targ}$$
-Constrain lateral velocity and acceleration at each additive step
+- Constrain lateral velocity and acceleration at each additive step
 
 
 ## Code
@@ -160,8 +160,8 @@ V3F QuadControl::LateralPositionControl(V3F posCmd, V3F velCmd, V3F pos, V3F vel
 
 
 ## Statement
-Constrain yaw command and error values to $[-2\pi:2\pi]$
-Use a proportional controller to command yaw rate
+- Constrain yaw command and error values to $[-2\pi:2\pi]$
+- Use a proportional controller to command yaw rate
 
 ## Code
 
@@ -207,9 +207,9 @@ float QuadControl::YawControl(float yawCmd, float yaw)
 >The thrust and moments should be converted to the appropriate 4 different desired thrust forces for the moments. Ensure that the dimensions of the drone are properly accounted for when calculating thrust from moments.
 
 ## Statement
-Calculate the orthogonal distance along each axis to the rotors (this is done in `QuadControl::Init()`)
-Convert the pqr moment commands into net forces across the xyz body axes by dividing by orth_l (x,y) and kappa (z)
-Implement the solution to the following system of equations to calculate required motor thrust (don't mix up your motor mapping):
+- Calculate the orthogonal distance along each axis to the rotors (this is done in `QuadControl::Init()`)
+- Convert the pqr moment commands into net forces across the xyz body axes by dividing by orth_l (x,y) and kappa (z)
+- Implement the solution to the following system of equations to calculate required motor thrust (don't mix up your motor mapping):
 $$
 \begin{pmatrix} 1 & 1 & 1 & 1 \\ 1 & -1 & -1 & 1 \\ 1 & 1 & -1 & -1\\ -1 & 1 & -1 & 1 \end{pmatrix} \times \begin{pmatrix} t_0 \\ t_1 \\ t_2\\ t_3 \end{pmatrix} = \begin{pmatrix} \bar{c} \\ \bar{f_x} \\ \bar{f_y} \\ \bar{f_z} \end{pmatrix}
 $$
