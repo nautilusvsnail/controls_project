@@ -7,9 +7,6 @@
 
 class QuadControl : public BaseController
 {
-private:
-  float to_rad(float deg);
-  
 public:
   QuadControl(string config) : BaseController(config) { Init(); };
 
@@ -53,6 +50,5 @@ public:
   float integratedAltitudeError;
   
   // additional parameters
-  float orth_l; // orthogonal distance from axes to rotors
   float integratorConstraint; // constrain i term to counter windup
 };

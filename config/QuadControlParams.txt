@@ -40,4 +40,3 @@ maxDescentRate = 2
 maxSpeedXY = 5
 maxHorizAccel = 12
 maxTiltAngle = .7
-integratorConstraint = .3
