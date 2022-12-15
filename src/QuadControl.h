@@ -48,7 +48,4 @@ public:
 
   // integral control
   float integratedAltitudeError;
-  
-  // additional parameters
-  float integratorConstraint; // constrain i term to counter windup
 };
