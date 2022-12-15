@@ -48,8 +48,6 @@ void QuadControl::Init()
   
   kappa = config->Get(_config + ".kappa", 0.01f);
   L = config->Get(_config + ".L", 0.01f); // dist from center to thrust
-  orth_l = L * sin(to_rad(45.f));
-  integratorConstraint = config->Get(_config + ".integratorConstraint", 100);
   
   // Moments of inertia
   Ixx = config->Get(_config + ".Ixx", 0.001f);
@@ -61,19 +59,6 @@ void QuadControl::Init()
   param_get(param_find("MC_PITCH_P"), &Kp_bank);
   param_get(param_find("MC_YAW_P"), &Kp_yaw);
 #endif
-}
-
-float QuadControl::to_rad(float deg)
-{
-  // convert an angle defined in degrees to radians
-  // INPUT:
-  //  deg: angle in degrees
-  // OUTPUT:
-  //  rad: angle in radians
-  
-  float rad;
-  rad = 2.f * F_PI * (deg / 360.f);
-  return rad;
 }
 
 VehicleCommand QuadControl::GenerateMotorCommands(float collThrustCmd, V3F momentCmd)
@@ -95,8 +80,8 @@ VehicleCommand QuadControl::GenerateMotorCommands(float collThrustCmd, V3F momen
   
 //  collThrustCmd = mass * CONST_GRAVITY;
   float f_c = collThrustCmd;
-  float f_p = momentCmd.x / orth_l;
-  float f_q = momentCmd.y / orth_l;
+  float f_p = momentCmd.x / (L * sin(0.785398));
+  float f_q = momentCmd.y / (L * sin(0.785398));
   float f_r = momentCmd.z / kappa;
   
   // where does it tell you motor spin direction???? it's opposite the drone in the exercises
@@ -218,7 +203,7 @@ float QuadControl::AltitudeControl(float posZCmd, float velZCmd, float posZ, flo
   float z_err = (posZCmd - posZ);
   float p_term = kpPosZ * z_err;
   integratedAltitudeError += z_err * dt;
-  integratedAltitudeError = CONSTRAIN(integratedAltitudeError,-integratorConstraint, integratorConstraint);
+  integratedAltitudeError = CONSTRAIN(integratedAltitudeError, -.3, .3);
   float i_term = KiPosZ * integratedAltitudeError;
   float d_term = kpVelZ * (velZCmd - velZ);
   float zdd_targ = p_term + i_term + d_term + accelZCmd;
